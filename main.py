@@ -8,6 +8,11 @@ with open('rooms.json') as rooms_file:
     db = json.load(rooms_file)
 
 
+@app.route('/')
+def hello():
+    return f'Hello, user!'
+
+
 @app.route('/add_room', methods=['POST'])
 def add_room():
     data = request.json
