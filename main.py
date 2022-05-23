@@ -25,7 +25,8 @@ def add_room():
     scene = data['scene']
     roomName = data['roomName']
 
-    if not isinstance(scene, str) or not isinstance(roomName, str) or scene == '' or roomName == '':
+    if not isinstance(scene, str) or not isinstance(
+            roomName, str) or scene == '' or roomName == '':
         return abort(400)
 
     if scene not in db:
@@ -50,7 +51,8 @@ def remove_room():
     scene = data['scene']
     roomName = data['roomName']
 
-    if not isinstance(scene, str) or not isinstance(roomName, str) or scene == '' or roomName == '':
+    if not isinstance(scene, str) or not isinstance(
+            roomName, str) or scene == '' or roomName == '':
         return abort(400)
 
     if scene not in db or roomName not in db[scene]:
